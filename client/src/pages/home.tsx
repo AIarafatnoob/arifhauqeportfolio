@@ -1,13 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { Link } from "wouter";
 import { type PortfolioItem } from "@shared/schema";
 import GalleryItem from "@/components/gallery-item";
-import Lightbox from "@/components/lightbox";
+import CaseStudyModal from "@/components/case-study-modal";
 
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { data: featuredItems, isLoading } = useQuery<PortfolioItem[]>({
     queryKey: ["/api/portfolio/featured"],
@@ -15,41 +14,55 @@ export default function Home() {
 
   const handleItemClick = (item: PortfolioItem) => {
     setSelectedItem(item);
-    setIsLightboxOpen(true);
+    setIsModalOpen(true);
   };
 
-  const closeLightbox = () => {
-    setIsLightboxOpen(false);
+  const closeModal = () => {
+    setIsModalOpen(false);
     setSelectedItem(null);
   };
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-serif font-bold text-primary mb-8 leading-tight">
-            HI!<br />
-            <span className="text-4xl md:text-6xl font-light">I'm Alex</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            A visual artist creating contemporary pieces that explore the intersection of digital and traditional media.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button 
-              onClick={() => document.getElementById('my-art')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-primary text-primary-foreground pill-lg font-medium hover:bg-primary/90 transition-colors"
-              data-testid="view-work-button"
-            >
-              View My Work
-            </button>
-            <button 
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-primary hover:text-primary/80 font-medium pill-md border border-primary transition-colors"
-              data-testid="learn-about-button"
-            >
-              Learn About Me
-            </button>
+      <section className="min-h-screen relative flex items-center px-6 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+          }}
+        />
+        
+        {/* Dark Overlay for Text Area */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <div className="max-w-2xl">
+            <h1 className="text-6xl md:text-8xl font-serif font-bold text-white mb-8 leading-tight">
+              HI!<br />
+              <span className="text-4xl md:text-6xl font-light">I'm Alex</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
+              A visual artist creating contemporary pieces that explore the intersection of digital and traditional media.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start gap-6">
+              <button 
+                onClick={() => document.getElementById('my-art')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-white text-black pill-lg font-medium hover:bg-white/90 transition-colors"
+                data-testid="view-work-button"
+              >
+                View My Work
+              </button>
+              <button 
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-white hover:text-white/80 font-medium pill-md border border-white transition-colors"
+                data-testid="learn-about-button"
+              >
+                Learn About Me
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -102,10 +115,10 @@ export default function Home() {
         </div>
       </section>
 
-      <Lightbox 
+      <CaseStudyModal 
         item={selectedItem}
-        isOpen={isLightboxOpen}
-        onClose={closeLightbox}
+        isOpen={isModalOpen}
+        onClose={closeModal}
       />
     </div>
   );
