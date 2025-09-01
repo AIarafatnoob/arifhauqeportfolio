@@ -44,7 +44,7 @@ export default function Portfolio() {
             Full Portfolio
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive view of my artistic journey, featuring works spanning the last five years.
+            A comprehensive view of my design journey, featuring branding projects spanning the last five years.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function Portfolio() {
         ) : (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
-              No works found for {selectedYear === "all" ? "any year" : selectedYear}.
+              No projects found for {selectedYear === "all" ? "any year" : selectedYear}.
             </p>
           </div>
         )}

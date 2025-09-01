@@ -48,7 +48,7 @@ export default function Navigation() {
             className="text-2xl font-serif font-semibold text-primary" 
             data-testid="logo"
           >
-            Alex Chen
+            Arif Haque
           </button>
           
           {/* Desktop Navigation */}

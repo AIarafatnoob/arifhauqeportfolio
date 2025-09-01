@@ -32,100 +32,100 @@ export class MemStorage implements IStorage {
   private initializePortfolioItems() {
     const sampleItems: InsertPortfolioItem[] = [
       {
-        title: "Neon Genesis",
-        description: "A vibrant exploration of digital consciousness and synthetic dreams",
-        category: "digital",
+        title: "TechFlow Brand Identity",
+        description: "Complete brand identity package for innovative tech startup",
+        category: "branding",
         year: "2024",
-        dimensions: "24\" x 36\"",
+        dimensions: "Logo Suite & Guidelines",
         imageUrl: "https://images.unsplash.com/photo-1549317336-206569e8475c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
         featured: "true",
-        client: "Digital Arts Museum",
+        client: "TechFlow Solutions (Germany)",
         deliveredIn: "March 2024",
-        review: "Absolutely stunning work that captures the essence of digital consciousness beautifully."
+        review: "Outstanding brand identity that perfectly captures our innovative spirit and professionalism."
       },
       {
-        title: "Spatial Dialogue",
-        description: "An interactive installation exploring human connection in physical space",
-        category: "installation", 
+        title: "GreenLife Packaging Design",
+        description: "Sustainable packaging design for organic food company",
+        category: "packaging", 
         year: "2024",
-        dimensions: "15' x 20' x 10'",
+        dimensions: "Multiple Product Lines",
         imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
         featured: "true",
-        client: "Contemporary Art Center",
+        client: "GreenLife Organics (Canada)",
         deliveredIn: "June 2024",
-        review: "An immersive experience that truly connects people through art. Exceptional execution."
+        review: "The packaging design perfectly reflects our commitment to sustainability and quality."
       },
       {
-        title: "Fragments of Memory",
-        description: "Mixed media piece incorporating found objects and digital elements",
-        category: "mixed",
+        title: "FinanceFirst Web Design",
+        description: "Modern responsive website design for financial consulting firm",
+        category: "web",
         year: "2024",
-        dimensions: "30\" x 40\"",
+        dimensions: "Responsive Web Design",
         imageUrl: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
         featured: "true",
-        client: "Private Collector",
+        client: "FinanceFirst Consulting (UK)",
         deliveredIn: "September 2024",
-        review: "The perfect blend of traditional and digital. A masterpiece that speaks to the soul."
+        review: "Professional design that builds trust and converts visitors into clients effectively."
       },
       {
-        title: "Digital Harmony",
-        description: "Geometric composition exploring balance in digital aesthetics",
-        category: "digital",
+        title: "StartupHub Logo Design",
+        description: "Dynamic logo design for technology incubator platform",
+        category: "logo",
         year: "2023",
-        dimensions: "20\" x 30\"",
+        dimensions: "Logo & Brand Mark",
         imageUrl: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
         featured: "false",
-        client: "Tech Startup Office",
+        client: "StartupHub Platform (USA)",
         deliveredIn: "December 2023",
-        review: "Perfect addition to our workspace. The geometric balance creates a calming environment."
+        review: "The logo perfectly represents our mission to support innovative startups."
       },
       {
-        title: "Process Studies",
-        description: "Documentation of creative process and studio practice",
-        category: "mixed",
+        title: "EcoVenture Social Media Kit",
+        description: "Comprehensive social media design kit for environmental NGO",
+        category: "social",
         year: "2022",
-        dimensions: "Various Sizes",
+        dimensions: "30+ Template Designs",
         imageUrl: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
         featured: "false",
-        client: "Art Academy",
+        client: "EcoVenture Foundation (Malaysia)",
         deliveredIn: "August 2022",
-        review: "Incredible insight into the artistic process. Educational and inspiring for our students."
+        review: "Amazing designs that helped us increase our social media engagement by 40%."
       },
       {
-        title: "Curated Spaces",
-        description: "Site-specific installation for contemporary gallery environments",
-        category: "installation",
+        title: "RetailMax Event Design",
+        description: "Complete event branding and promotional materials for retail conference",
+        category: "event",
         year: "2022",
-        dimensions: "10' x 12'",
+        dimensions: "Event Branding Suite",
         imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=750",
         featured: "false",
-        client: "Modern Gallery",
+        client: "RetailMax Conference (China)",
         deliveredIn: "April 2022",
-        review: "Transformed our space completely. Visitors are constantly amazed by the installation."
+        review: "Professional event design that created a memorable experience for all attendees."
       },
       {
-        title: "Color Studies",
-        description: "Abstract exploration of color relationships and emotional resonance",
-        category: "mixed",
+        title: "HealthPlus Print Campaign",
+        description: "Healthcare awareness campaign with print and digital materials",
+        category: "print",
         year: "2021",
-        dimensions: "18\" x 24\"",
+        dimensions: "Multi-format Campaign",
         imageUrl: "https://images.unsplash.com/photo-1549317336-206569e8475c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900",
         featured: "false",
-        client: "Interior Design Firm",
+        client: "HealthPlus Clinics (Bangladesh)",
         deliveredIn: "November 2021",
-        review: "The color harmony is exactly what we needed for our client's home. Beautifully executed."
+        review: "Effective campaign design that significantly increased health awareness in our community."
       },
       {
-        title: "Organic Flow",
-        description: "Digital art piece inspired by natural forms and movement",
-        category: "digital",
+        title: "WellnessFlow Brand Identity",
+        description: "Calming brand identity design for wellness and meditation center",
+        category: "branding",
         year: "2021", 
-        dimensions: "16\" x 20\"",
+        dimensions: "Complete Brand Package",
         imageUrl: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
         featured: "false",
-        client: "Wellness Center",
+        client: "WellnessFlow Center (Bangladesh)",
         deliveredIn: "February 2021",
-        review: "Creates such a peaceful atmosphere. Our clients love the natural flow and calming energy."
+        review: "Perfect brand identity that reflects our peaceful atmosphere and wellness mission."
       }
     ];
 

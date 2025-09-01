@@ -11,24 +11,24 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
-              alt="Alex Chen portrait" 
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
+              alt="Arif Haque portrait" 
               className="w-full h-96 object-cover pill"
               data-testid="artist-portrait"
             />
           </div>
           <div>
             <h2 className="text-3xl font-serif font-semibold mb-6">
-              The Artist Behind the Work
+              The Designer Behind the Brand
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Born in San Francisco and raised between cultures, my artistic journey began with a fascination for the spaces where traditional and digital media intersect. I believe art should challenge perspectives and create dialogue.
+              Born and raised in Bangladesh, my design journey began with a passion for visual storytelling and brand identity. I believe design should create meaningful connections between brands and their audiences.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              After completing my MFA at UCLA, I've spent the last five years developing a unique visual language that explores themes of identity, technology, and human connection in our digital age.
+              With 8+ years of experience working with international clients from Germany, Malaysia, China, Canada, the UK, and the USA, I've developed expertise in creating visually stunning designs that effectively communicate brand messages.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              When I'm not in the studio, you'll find me exploring gallery districts, experimenting with new technologies, or teaching workshops to emerging artists.
+              When I'm not designing, you'll find me exploring new design trends, mentoring junior designers, or working on innovative branding solutions for emerging businesses.
             </p>
           </div>
         </div>
@@ -36,32 +36,51 @@ export default function About() {
         {/* Education & Experience */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
           <div>
-            <h3 className="text-2xl font-serif font-semibold mb-6">Education</h3>
+            <h3 className="text-2xl font-serif font-semibold mb-6">Education & Certifications</h3>
             <div className="space-y-6">
-              <div data-testid="education-mfa">
-                <h4 className="text-lg font-semibold">MFA in Fine Arts</h4>
-                <p className="text-muted-foreground">UCLA, 2019</p>
+              <div data-testid="education-typography">
+                <h4 className="text-lg font-semibold">Essential Typography Principles</h4>
+                <p className="text-muted-foreground">ALISON, 2025</p>
               </div>
-              <div data-testid="education-bfa">
-                <h4 className="text-lg font-semibold">BFA in Digital Media</h4>
-                <p className="text-muted-foreground">RISD, 2017</p>
+              <div data-testid="education-graphic-design">
+                <h4 className="text-lg font-semibold">Graphic Design Course</h4>
+                <p className="text-muted-foreground">ALISON, 2025</p>
+              </div>
+              <div data-testid="education-ai">
+                <h4 className="text-lg font-semibold">AI for Beginners</h4>
+                <p className="text-muted-foreground">HP LIFE Foundation, 2025</p>
+              </div>
+              <div data-testid="education-branding">
+                <h4 className="text-lg font-semibold">Logo & Branding Identity</h4>
+                <p className="text-muted-foreground">Domestika (Mentor: Sagi Haviv), 2020-2021</p>
+              </div>
+              <div data-testid="education-visual">
+                <h4 className="text-lg font-semibold">Graphic & Visual Identity Design</h4>
+                <p className="text-muted-foreground">DPTI Dhaka, 2013-2015</p>
               </div>
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-serif font-semibold mb-6">Selected Exhibitions</h3>
+            <h3 className="text-2xl font-serif font-semibold mb-6">Professional Experience</h3>
             <div className="space-y-6">
-              <div data-testid="exhibition-moca">
-                <h4 className="text-lg font-semibold">Contemporary Visions</h4>
-                <p className="text-muted-foreground">MOCA Los Angeles, 2024</p>
+              <div data-testid="experience-independent">
+                <h4 className="text-lg font-semibold">Independent Graphic Designer</h4>
+                <p className="text-muted-foreground">December 2021 - Present</p>
+                <p className="text-sm text-muted-foreground mt-1">15+ international branding projects, 95% on-time delivery</p>
               </div>
-              <div data-testid="exhibition-sfmoma">
-                <h4 className="text-lg font-semibold">Digital Futures</h4>
-                <p className="text-muted-foreground">SF Museum of Modern Art, 2023</p>
+              <div data-testid="experience-senior">
+                <h4 className="text-lg font-semibold">Senior Graphic Designer</h4>
+                <p className="text-muted-foreground">Design Bari, Jashore | March 2018 - Nov 2021</p>
+                <p className="text-sm text-muted-foreground mt-1">Led team of 6 designers, 35% increase in client retention</p>
               </div>
-              <div data-testid="exhibition-whitney">
-                <h4 className="text-lg font-semibold">Emerging Artists</h4>
-                <p className="text-muted-foreground">Whitney Biennial, 2022</p>
+              <div data-testid="experience-compass">
+                <h4 className="text-lg font-semibold">Graphic Designer</h4>
+                <p className="text-muted-foreground">Compass Communication, Dhaka | 2015 - 2017</p>
+                <p className="text-sm text-muted-foreground mt-1">25% increase in user engagement through design</p>
+              </div>
+              <div data-testid="experience-entry">
+                <h4 className="text-lg font-semibold">Entry-Level Designer</h4>
+                <p className="text-muted-foreground">Zeronlab IT Solution, Dhaka | 2014</p>
               </div>
             </div>
           </div>
@@ -69,42 +88,44 @@ export default function About() {
 
         {/* Social Media Section */}
         <div className="text-center mb-20">
-          <h3 className="text-2xl font-serif font-semibold mb-8">Follow My Journey</h3>
+          <h3 className="text-2xl font-serif font-semibold mb-8">Let's Connect</h3>
           <div className="flex justify-center items-center gap-8 flex-wrap">
             <a 
-              href="#" 
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white pill p-6 hover:scale-105 transition-transform duration-300"
-              data-testid="social-instagram-prominent"
+              href="mailto:arifhaque.zeronlab@gmail.com" 
+              className="bg-red-600 text-white pill p-6 hover:scale-105 transition-transform duration-300"
+              data-testid="social-email-prominent"
             >
               <div className="flex items-center gap-3">
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h3.819v9.273L12 8.183l6.545 4.91V3.82h3.819c.904 0 1.636.733 1.636 1.637z"/>
                 </svg>
                 <div className="text-left">
-                  <div className="font-semibold">Instagram</div>
-                  <div className="text-sm opacity-90">@alexchen.art</div>
+                  <div className="font-semibold">Email</div>
+                  <div className="text-sm opacity-90">arifhaque.zeronlab@gmail.com</div>
                 </div>
               </div>
             </a>
 
             <a 
-              href="#" 
-              className="bg-blue-600 text-white pill p-6 hover:scale-105 transition-transform duration-300"
-              data-testid="social-behance-prominent"
+              href="tel:+8801712773855" 
+              className="bg-green-600 text-white pill p-6 hover:scale-105 transition-transform duration-300"
+              data-testid="social-phone-prominent"
             >
               <div className="flex items-center gap-3">
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.48.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.497 1.19.9.26 1.567.65 2.002 1.17.435.52.652 1.19.652 2.01 0 .75-.13 1.39-.39 1.93-.26.54-.65.99-1.17 1.35-.52.36-1.146.62-1.883.78-.736.16-1.576.24-2.52.24H0V4.51h6.938v-.007zM16.94 16.665c.44.428 1.073.643 1.894.643.59 0 1.1-.148 1.53-.447.43-.297.71-.687.84-1.17h2.31c-.39 1.39-1.03 2.39-1.91 3.01-.88.62-1.94.93-3.18.93-1.337 0-2.518-.4-3.544-1.2-1.025-.8-1.537-2.19-1.537-4.17 0-1.83.537-3.27 1.61-4.32 1.073-1.05 2.426-1.58 4.06-1.58 1.23 0 2.27.28 3.12.84.85.56 1.525 1.311 2.025 2.254.5.943.75 2.006.75 3.19l-.02.32h-6.95c.02.97.29 1.683.73 2.111z"/>
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                 </svg>
                 <div className="text-left">
-                  <div className="font-semibold">Behance</div>
-                  <div className="text-sm opacity-90">alexchen_studio</div>
+                  <div className="font-semibold">Phone</div>
+                  <div className="text-sm opacity-90">+88 01712773855</div>
                 </div>
               </div>
             </a>
 
             <a 
-              href="#" 
+              href="https://dribbble.com/arif_haque" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-black text-white pill p-6 hover:scale-105 transition-transform duration-300"
               data-testid="social-dribbble-prominent"
             >
@@ -114,23 +135,7 @@ export default function About() {
                 </svg>
                 <div className="text-left">
                   <div className="font-semibold">Dribbble</div>
-                  <div className="text-sm opacity-90">alexchen</div>
-                </div>
-              </div>
-            </a>
-
-            <a 
-              href="#" 
-              className="bg-blue-700 text-white pill p-6 hover:scale-105 transition-transform duration-300"
-              data-testid="social-linkedin-prominent"
-            >
-              <div className="flex items-center gap-3">
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                <div className="text-left">
-                  <div className="font-semibold">LinkedIn</div>
-                  <div className="text-sm opacity-90">Alex Chen</div>
+                  <div className="text-sm opacity-90">arif_haque</div>
                 </div>
               </div>
             </a>
@@ -140,10 +145,10 @@ export default function About() {
         {/* Philosophy */}
         <div className="bg-muted p-12 pill">
           <h3 className="text-2xl font-serif font-semibold mb-6 text-center">
-            Artistic Philosophy
+            Design Philosophy
           </h3>
           <blockquote className="text-xl text-center italic text-muted-foreground leading-relaxed" data-testid="artistic-philosophy">
-            "Art is the bridge between what is and what could be. Through my work, I explore the liminal spaces where tradition meets innovation, where the physical and digital converge, and where individual stories become universal truths."
+            "I am passionate about combining aesthetics with functionality to drive brand success. My systematic approach to design ensures that every project not only looks exceptional but also effectively communicates the brand's message and values."
           </blockquote>
         </div>
       </div>

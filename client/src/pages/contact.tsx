@@ -57,7 +57,7 @@ export default function Contact() {
             Contact
           </h1>
           <p className="text-xl text-muted-foreground">
-            Let's collaborate on your next project or discuss potential exhibitions.
+            Let's collaborate on your next branding project or discuss design opportunities.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function Contact() {
                 <Mail className="w-6 h-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-muted-foreground">alex@alexchenart.com</p>
+                  <p className="text-muted-foreground">arifhaque.zeronlab@gmail.com</p>
                 </div>
               </div>
 
@@ -79,7 +79,7 @@ export default function Contact() {
                 <Phone className="w-6 h-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
-                  <p className="text-muted-foreground">+1 (415) 555-0123</p>
+                  <p className="text-muted-foreground">+88 01712773855</p>
                 </div>
               </div>
 
@@ -88,8 +88,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold mb-1">Studio</h3>
                   <p className="text-muted-foreground">
-                    123 Art District<br />
-                    San Francisco, CA 94110
+                    Dhaka, Bangladesh<br />
+                    Available for Remote Work
                   </p>
                 </div>
               </div>
@@ -108,12 +108,12 @@ export default function Contact() {
 
             {/* Social Links */}
             <div className="mt-12">
-              <h3 className="text-lg font-semibold mb-4">Follow My Work</h3>
+              <h3 className="text-lg font-semibold mb-4">View My Portfolio</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-instagram">
-                  <span className="sr-only">Instagram</span>
+                <a href="https://dribbble.com/arif_haque" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-dribbble">
+                  <span className="sr-only">Dribbble</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.621 5.367 11.988 11.988 11.988c6.62 0 11.987-5.367 11.987-11.988C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.349-1.052-2.349-2.35c0-1.297 1.052-2.349 2.349-2.349c1.297 0 2.349 1.052 2.349 2.349C10.798 15.936 9.746 16.988 8.449 16.988z"/>
+                    <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm7.568 5.302c1.4 1.5 2.252 3.5 2.273 5.698-.653-.126-2.194-.26-3.742-.16-.1-.246-.2-.49-.32-.73-.32-.77-.67-1.52-1.03-2.26 1.34-.55 2.478-1.228 2.818-1.548zM12 2.275c2.245 0 4.315.855 5.876 2.256-.2.2-1.26.748-2.56 1.17-1.27-2.295-2.646-4.16-2.848-4.426A9.725 9.725 0 0112 2.275zM9.7 1.9c.22.27 1.6 2.14 2.87 4.42C10.18 7.69 7.9 8.35 5.27 8.35c-.27 0-.54 0-.81-.02C5.11 6.06 7.03 3.42 9.7 1.9zm-7.15 10.25c.3.01.61.01.91.01 3.36 0 6.17-.85 7.97-2.22.32.62.6 1.26.85 1.9-.14.04-.27.09-.4.15-2.1.82-3.97 2.38-5.26 4.56A9.7 9.7 0 012.55 12.15zm1.9 6.62c1.1-1.94 2.69-3.24 4.45-3.95.37-.15.75-.27 1.14-.36.2.52.38 1.04.54 1.57.48 1.62.73 3.17.8 4.6-2.44-.49-4.47-2.04-5.93-3.86zm7.33 2.9c-.1-1.32-.35-2.72-.8-4.26-.14-.48-.3-.95-.48-1.4 1.4-.18 2.9-.12 4.54.18-.18 2.23-1.04 4.25-2.42 5.7-.84-.14-1.68-.22-2.84-.22z"/>
                   </svg>
                 </a>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="social-behance">
@@ -188,11 +188,11 @@ export default function Contact() {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="commission">Commission Inquiry</SelectItem>
-                          <SelectItem value="exhibition">Exhibition Opportunity</SelectItem>
+                          <SelectItem value="branding">Branding Project</SelectItem>
+                          <SelectItem value="logo">Logo Design</SelectItem>
+                          <SelectItem value="packaging">Packaging Design</SelectItem>
+                          <SelectItem value="web">Web Design</SelectItem>
                           <SelectItem value="collaboration">Collaboration</SelectItem>
-                          <SelectItem value="purchase">Purchase Inquiry</SelectItem>
-                          <SelectItem value="press">Press/Media</SelectItem>
                           <SelectItem value="general">General Inquiry</SelectItem>
                         </SelectContent>
                       </Select>

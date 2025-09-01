@@ -42,10 +42,10 @@ export default function Home() {
           <div className="max-w-2xl">
             <h1 className="text-6xl md:text-8xl font-serif font-bold text-white mb-8 leading-tight">
               HI!<br />
-              <span className="text-4xl md:text-6xl font-light">I'm Alex</span>
+              <span className="text-4xl md:text-6xl font-light">I'm Arif</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
-              A visual artist creating contemporary pieces that explore the intersection of digital and traditional media.
+              Creative and detail-oriented Graphic Designer with 8+ years of experience in branding, logo design, packaging, and web design.
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-6">
               <button 
@@ -53,7 +53,7 @@ export default function Home() {
                 className="bg-white text-black pill-lg font-medium hover:bg-white/90 transition-colors"
                 data-testid="view-work-button"
               >
-                View My Work
+                View My Portfolio
               </button>
               <button 
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
@@ -71,7 +71,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-muted">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif font-semibold text-center mb-16">
-            Featured Works
+            Featured Projects
           </h2>
           
           {isLoading ? (
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-muted-foreground text-lg">No featured works available at the moment.</p>
+              <p className="text-muted-foreground text-lg">No featured projects available at the moment.</p>
             </div>
           )}
           
@@ -109,7 +109,7 @@ export default function Home() {
               className="bg-primary text-primary-foreground pill-lg font-medium hover:bg-primary/90 transition-colors"
               data-testid="view-all-works-button"
             >
-              View All Works
+              View All Projects
             </button>
           </div>
         </div>
