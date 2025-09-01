@@ -38,7 +38,10 @@ export class MemStorage implements IStorage {
         year: "2024",
         dimensions: "24\" x 36\"",
         imageUrl: "https://images.unsplash.com/photo-1549317336-206569e8475c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
-        featured: "true"
+        featured: "true",
+        client: "Digital Arts Museum",
+        deliveredIn: "March 2024",
+        review: "Absolutely stunning work that captures the essence of digital consciousness beautifully."
       },
       {
         title: "Spatial Dialogue",
@@ -47,7 +50,10 @@ export class MemStorage implements IStorage {
         year: "2024",
         dimensions: "15' x 20' x 10'",
         imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
-        featured: "true"
+        featured: "true",
+        client: "Contemporary Art Center",
+        deliveredIn: "June 2024",
+        review: "An immersive experience that truly connects people through art. Exceptional execution."
       },
       {
         title: "Fragments of Memory",
@@ -56,7 +62,10 @@ export class MemStorage implements IStorage {
         year: "2024",
         dimensions: "30\" x 40\"",
         imageUrl: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
-        featured: "true"
+        featured: "true",
+        client: "Private Collector",
+        deliveredIn: "September 2024",
+        review: "The perfect blend of traditional and digital. A masterpiece that speaks to the soul."
       },
       {
         title: "Digital Harmony",
@@ -65,7 +74,10 @@ export class MemStorage implements IStorage {
         year: "2023",
         dimensions: "20\" x 30\"",
         imageUrl: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
-        featured: "false"
+        featured: "false",
+        client: "Tech Startup Office",
+        deliveredIn: "December 2023",
+        review: "Perfect addition to our workspace. The geometric balance creates a calming environment."
       },
       {
         title: "Process Studies",
@@ -74,7 +86,10 @@ export class MemStorage implements IStorage {
         year: "2022",
         dimensions: "Various Sizes",
         imageUrl: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000",
-        featured: "false"
+        featured: "false",
+        client: "Art Academy",
+        deliveredIn: "August 2022",
+        review: "Incredible insight into the artistic process. Educational and inspiring for our students."
       },
       {
         title: "Curated Spaces",
@@ -83,7 +98,10 @@ export class MemStorage implements IStorage {
         year: "2022",
         dimensions: "10' x 12'",
         imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=750",
-        featured: "false"
+        featured: "false",
+        client: "Modern Gallery",
+        deliveredIn: "April 2022",
+        review: "Transformed our space completely. Visitors are constantly amazed by the installation."
       },
       {
         title: "Color Studies",
@@ -92,7 +110,10 @@ export class MemStorage implements IStorage {
         year: "2021",
         dimensions: "18\" x 24\"",
         imageUrl: "https://images.unsplash.com/photo-1549317336-206569e8475c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900",
-        featured: "false"
+        featured: "false",
+        client: "Interior Design Firm",
+        deliveredIn: "November 2021",
+        review: "The color harmony is exactly what we needed for our client's home. Beautifully executed."
       },
       {
         title: "Organic Flow",
@@ -101,7 +122,10 @@ export class MemStorage implements IStorage {
         year: "2021", 
         dimensions: "16\" x 20\"",
         imageUrl: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
-        featured: "false"
+        featured: "false",
+        client: "Wellness Center",
+        deliveredIn: "February 2021",
+        review: "Creates such a peaceful atmosphere. Our clients love the natural flow and calming energy."
       }
     ];
 

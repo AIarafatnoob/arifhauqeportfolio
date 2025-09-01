@@ -12,6 +12,9 @@ export const portfolioItems = pgTable("portfolio_items", {
   dimensions: text("dimensions"),
   imageUrl: text("image_url").notNull(),
   featured: text("featured").default("false"), // true/false as string
+  client: text("client"),
+  deliveredIn: text("delivered_in"),
+  review: text("review"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
