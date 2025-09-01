@@ -19,7 +19,7 @@ export default function GalleryItem({ item, onClick, className = "" }: GalleryIt
         className="w-full h-auto object-cover pill"
         loading="lazy"
       />
-      <div className="p-6 bg-background" style={{ borderRadius: '2rem' }}>
+      <div className="p-6 bg-background" style={{ borderRadius: '30px' }}>
         <h3 className="text-xl font-serif font-semibold mb-2" data-testid={`title-${item.id}`}>
           {item.title}
         </h3>
