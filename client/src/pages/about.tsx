@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="pt-20 min-h-screen py-20 px-6">
+    <div className="min-h-screen py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">
@@ -13,7 +13,7 @@ export default function About() {
             <img 
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
               alt="Alex Chen portrait" 
-              className="w-full h-96 object-cover rounded-lg"
+              className="w-full h-96 object-cover pill"
               data-testid="artist-portrait"
             />
           </div>
@@ -68,7 +68,7 @@ export default function About() {
         </div>
 
         {/* Philosophy */}
-        <div className="bg-muted p-12 rounded-lg">
+        <div className="bg-muted p-12 pill">
           <h3 className="text-2xl font-serif font-semibold mb-6 text-center">
             Artistic Philosophy
           </h3>

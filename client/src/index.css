@@ -40,7 +40,8 @@
   --font-sans: Inter, 'Helvetica Neue', sans-serif;
   --font-serif: 'Playfair Display', serif;
   --font-mono: Menlo, monospace;
-  --radius: 0.5rem;
+  --radius: 2rem;
+  --pill-radius: 9999px;
   --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 10% / 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(0 0% 10% / 0.00);
   --shadow-sm: 0px 2px 0px 0px hsl(0 0% 10% / 0.00), 0px 1px 2px -1px hsl(0 0% 10% / 0.00);
@@ -93,6 +94,27 @@
   }
 }
 
+@layer utilities {
+  .pill {
+    border-radius: var(--pill-radius);
+  }
+  
+  .pill-lg {
+    border-radius: var(--pill-radius);
+    padding: 0.75rem 2rem;
+  }
+  
+  .pill-md {
+    border-radius: var(--pill-radius);
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .pill-sm {
+    border-radius: var(--pill-radius);
+    padding: 0.25rem 1rem;
+  }
+}
+
 /* Custom animations and transitions */
 .page-transition {
   animation: fadeIn 0.6s ease-in-out;
@@ -111,6 +133,8 @@
 
 .gallery-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--pill-radius);
+  overflow: hidden;
 }
 
 .gallery-item:hover {
@@ -118,19 +142,14 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.nav-link {
-  position: relative;
-  transition: color 0.3s ease;
+/* Section spacing */
+section {
+  scroll-margin-top: 80px;
 }
 
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--primary);
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Lightbox styles */

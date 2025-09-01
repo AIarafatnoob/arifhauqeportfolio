@@ -16,10 +16,10 @@ export default function GalleryItem({ item, onClick, className = "" }: GalleryIt
       <img 
         src={item.imageUrl} 
         alt={item.title}
-        className="w-full h-auto object-cover"
+        className="w-full h-auto object-cover pill"
         loading="lazy"
       />
-      <div className="p-4 bg-background">
+      <div className="p-4 bg-background pill mt-2">
         <h3 className="text-xl font-serif font-semibold mb-2" data-testid={`title-${item.id}`}>
           {item.title}
         </h3>

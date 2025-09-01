@@ -50,7 +50,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-20 min-h-screen py-20 px-6">
+    <div className="min-h-screen py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">

@@ -1,83 +1,112 @@
-import { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { path: "/", label: "HI!" },
-  { path: "/my-art", label: "My Art" },
-  { path: "/about", label: "About Me" },
-  { path: "/portfolio", label: "Full Portfolio" },
-  { path: "/contact", label: "Contact" },
+  { id: "home", label: "HI!" },
+  { id: "my-art", label: "My Art" },
+  { id: "about", label: "About Me" },
+  { id: "portfolio", label: "Full Portfolio" },
+  { id: "contact", label: "Contact" },
 ];
 
 export default function Navigation() {
-  const [location] = useLocation();
+  const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const isActivePage = (path: string) => {
-    if (path === "/" && location === "/") return true;
-    if (path !== "/" && location.startsWith(path)) return true;
-    return false;
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => document.getElementById(item.id));
+      const scrollY = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollY) {
+          setActiveSection(navItems[i].id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <nav className="fixed top-0 left-0 w-full bg-background/95 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-serif font-semibold text-primary" data-testid="logo">
+          <button 
+            onClick={() => scrollToSection("home")}
+            className="text-2xl font-serif font-semibold text-primary" 
+            data-testid="logo"
+          >
             Alex Chen
-          </Link>
+          </button>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
+          <div className="hidden md:flex items-center bg-muted pill-lg">
+            {navItems.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  "nav-link text-foreground hover:text-primary font-medium transition-colors",
-                  isActivePage(item.path) && "active"
+                  "pill-md font-medium transition-all duration-300 relative",
+                  activeSection === item.id
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "text-foreground hover:text-primary hover:bg-accent",
+                  index !== navItems.length - 1 && "mr-2"
                 )}
                 data-testid={`nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden pill p-3 bg-muted hover:bg-accent transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="mobile-menu-toggle"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border" data-testid="mobile-menu">
-            <div className="flex flex-col space-y-4 mt-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={cn(
-                    "nav-link text-left text-foreground hover:text-primary font-medium transition-colors",
-                    isActivePage(item.path) && "active"
-                  )}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  data-testid={`mobile-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+          <div className="md:hidden mt-4 pb-4" data-testid="mobile-menu">
+            <div className="bg-muted pill p-4">
+              <div className="flex flex-col space-y-3">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={cn(
+                      "pill-md font-medium transition-all duration-300 text-left",
+                      activeSection === item.id
+                        ? "bg-primary text-primary-foreground"
+                        : "text-foreground hover:text-primary hover:bg-accent"
+                    )}
+                    data-testid={`mobile-nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}

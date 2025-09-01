@@ -24,7 +24,7 @@ export default function Home() {
   };
 
   return (
-    <div className="pt-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -36,20 +36,20 @@ export default function Home() {
             A visual artist creating contemporary pieces that explore the intersection of digital and traditional media.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link 
-              href="/my-art"
-              className="bg-primary text-primary-foreground px-8 py-4 font-medium hover:bg-primary/90 transition-colors rounded-md"
+            <button 
+              onClick={() => document.getElementById('my-art')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-primary text-primary-foreground pill-lg font-medium hover:bg-primary/90 transition-colors"
               data-testid="view-work-button"
             >
               View My Work
-            </Link>
-            <Link 
-              href="/about"
-              className="text-primary hover:text-primary/80 font-medium border-b-2 border-primary pb-1 transition-colors"
+            </button>
+            <button 
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-primary hover:text-primary/80 font-medium pill-md border border-primary transition-colors"
               data-testid="learn-about-button"
             >
               Learn About Me
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -91,13 +91,13 @@ export default function Home() {
           )}
           
           <div className="text-center mt-12">
-            <Link 
-              href="/my-art"
-              className="bg-primary text-primary-foreground px-8 py-4 font-medium hover:bg-primary/90 transition-colors rounded-md"
+            <button 
+              onClick={() => document.getElementById('my-art')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-primary text-primary-foreground pill-lg font-medium hover:bg-primary/90 transition-colors"
               data-testid="view-all-works-button"
             >
               View All Works
-            </Link>
+            </button>
           </div>
         </div>
       </section>

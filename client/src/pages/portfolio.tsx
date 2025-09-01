@@ -37,7 +37,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="pt-20 min-h-screen py-20 px-6">
+    <div className="min-h-screen py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">
@@ -56,7 +56,7 @@ export default function Portfolio() {
                 key={year.value}
                 onClick={() => setSelectedYear(year.value)}
                 className={cn(
-                  "px-6 py-2 font-medium transition-colors",
+                  "pill-md font-medium transition-colors",
                   selectedYear === year.value
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-accent"
