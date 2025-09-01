@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "@/components/navigation";
 import Home from "@/pages/home";
-import MyArt from "@/pages/my-art";
 import About from "@/pages/about";
 import Portfolio from "@/pages/portfolio";
 import Contact from "@/pages/contact";
@@ -18,9 +17,6 @@ function App() {
           <main>
             <section id="home">
               <Home />
-            </section>
-            <section id="my-art">
-              <MyArt />
             </section>
             <section id="about">
               <About />

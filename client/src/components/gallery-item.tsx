@@ -26,7 +26,7 @@ export default function GalleryItem({ item, onClick, className = "" }: GalleryIt
         <div className="absolute bottom-0 left-0 right-0 bg-black/90 text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"
              style={{ height: '60%', borderRadius: '30px' }}
              data-testid={`overlay-${item.id}`}>
-          <div className="h-full flex flex-col justify-end space-y-3">
+          <div className="h-full flex flex-col justify-start space-y-3">
             {item.client && (
               <div>
                 <p className="text-xs uppercase tracking-wide text-gray-300 mb-1">Client</p>
