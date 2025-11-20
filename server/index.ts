@@ -1,10 +1,7 @@
-// server/index.ts (refactored)
 import express, { type Request, Response, NextFunction } from "express";
-import http from "http";
 import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
+import { serveStatic, log } from "./vite.prod"; // <-- Import from the new production file
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -49,8 +46,11 @@ export async function createApp() {
   });
 
   if (process.env.NODE_ENV === "development") {
+    // Dynamically import the dev server setup
+    const { setupVite } = await import("./vite.dev");
     await setupVite(app, server);
   } else {
+    // Use the production static server
     serveStatic(app);
   }
 
