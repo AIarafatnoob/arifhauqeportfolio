@@ -2,6 +2,9 @@ backend:
   name: github
   repo: AIarafatnoob/arifhauqeportfolio # Your repo path
   branch: main # Branch to update
+  base_url: https://arifhaquee.netlify.app
+
+site_url: https://arifhaquee.netlify.app
 
 media_folder: "client/public/uploads" # Folder where media files will be stored
 public_folder: "/uploads" # The src attribute for uploaded media will begin with this path
