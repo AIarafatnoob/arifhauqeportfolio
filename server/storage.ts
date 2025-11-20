@@ -35,7 +35,7 @@ export class JsonStorage implements IStorage {
     try {
       const jsonPath = path.resolve(process.cwd(), 'client/src/data/projects.json');
       const jsonText = fs.readFileSync(jsonPath, 'utf-8');
-      const itemsFromFile = JSON.parse(jsonText) as InsertPortfolioItem[];
+      const itemsFromFile = (JSON.parse(jsonText) as { projects: InsertPortfolioItem[] }).projects;
 
       // Add id and createdAt to mimic the old in-memory structure,
       // as the frontend components may rely on these properties.

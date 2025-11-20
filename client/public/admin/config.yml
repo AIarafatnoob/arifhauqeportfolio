@@ -1,30 +1,33 @@
 backend:
   name: github
-  repo: AIarafatnoob/arifhauqeportfolio # Replace with your repo path
+  repo: AIarafatnoob/arifhauqeportfolio # Your repo path
   branch: main # Branch to update
 
 media_folder: "client/public/uploads" # Folder where media files will be stored
 public_folder: "/uploads" # The src attribute for uploaded media will begin with this path
 
+# This defines a single collection that manages the projects.json file
 collections:
-  - name: "projects"
-    label: "Projects"
-    file: "client/src/data/projects.json"
-    label_singular: "Project"
-    description: "Add and edit projects for the portfolio and featured sections."
-    fields:
-      - name: "projects"
-        label: "Portfolio Projects"
-        label_singular: "Project"
-        widget: "list"
+  - name: "portfolio" # A name for the collection
+    label: "Portfolio"
+    files: # A file collection uses the 'files' property
+      - name: "projects" # An identifier for the file
+        label: "All Projects"
+        file: "client/src/data/projects.json" # Path to the file being edited
+        description: "Add and edit projects for the portfolio and featured sections."
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Image", name: "imageUrl", widget: "image" }
-          - { label: "Category", name: "category", widget: "string" }
-          - { label: "Year", name: "year", widget: "string" }
-          - { label: "Client", name: "client", widget: "string", required: false }
-          - { label: "Delivered In", name: "deliveredIn", widget: "string", required: false }
-          - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
-          - { label: "Review", name: "review", widget: "text", required: false }
-          - { label: "Featured", name: "featured", widget: "boolean", default: false }
+          - name: "projects"
+            label: "Portfolio Projects"
+            label_singular: "Project"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "imageUrl", widget: "image" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Client", name: "client", widget: "string", required: false }
+              - { label: "Delivered In", name: "deliveredIn", widget: "string", required: false }
+              - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
+              - { label: "Review", name: "review", widget: "text", required: false }
+              - { label: "Featured", name: "featured", widget: "boolean", default: false }
