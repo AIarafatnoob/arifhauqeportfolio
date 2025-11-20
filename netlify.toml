@@ -6,6 +6,13 @@
 [functions]
   node_bundler = "esbuild"
 
+# Exclude build-time dependencies from the serverless function bundle
+[functions."*"]
+  external_node_modules = [
+    "@babel/preset-typescript",
+    "lightningcss"
+  ]
+
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/server"
