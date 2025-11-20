@@ -1,9 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic, log } from "./vite.prod"; // <-- Import from the new production file
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
 
 export async function createApp() {
   const app = express();
@@ -58,7 +55,7 @@ export async function createApp() {
 }
 
 // This block will only run when the script is executed directly
-const isMainModule = process.argv[1] === __filename;
+const isMainModule = process.argv[1] && process.argv[1].endsWith('server/index.ts');
 
 if (isMainModule) {
   (async () => {

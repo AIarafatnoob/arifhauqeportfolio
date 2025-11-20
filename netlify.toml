@@ -12,6 +12,7 @@
     "@babel/preset-typescript",
     "lightningcss"
   ]
+  included_files = ["client/src/data/projects.json"]
 
 [[redirects]]
   from = "/*"
