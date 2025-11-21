@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { id: "home", label: "HI!" },
+  { id: "featured-projects", label: "Featured Projects" },
   { id: "about", label: "About Me" },
   { id: "portfolio", label: "Full Portfolio" },
   { id: "contact", label: "Contact" },
@@ -45,10 +46,18 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <button 
             onClick={() => scrollToSection("home")}
-            className="text-2xl font-serif font-semibold text-primary" 
+            className={cn(
+              "pill-md transition-colors duration-500",
+              activeSection === "home" ? "bg-muted" : "bg-primary"
+            )} 
             data-testid="logo"
           >
-            Arif Haque
+            <span className={cn(
+              "text-2xl font-serif font-bold transition-colors duration-500",
+              activeSection === "home" ? "text-primary" : "text-white"
+            )}>
+              Arif Haque
+            </span>
           </button>
           
           {/* Desktop Navigation */}

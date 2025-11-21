@@ -7,6 +7,7 @@ import Home from "@/pages/home";
 import About from "@/pages/about";
 import Portfolio from "@/pages/portfolio";
 import Contact from "@/pages/contact";
+import WhatsAppButton from "@/components/whatsapp-button";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           </main>
         </div>
         <Toaster />
+        <WhatsAppButton />
       </TooltipProvider>
     </QueryClientProvider>
   );

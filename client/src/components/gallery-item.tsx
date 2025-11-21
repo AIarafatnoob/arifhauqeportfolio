@@ -9,8 +9,7 @@ interface GalleryItemProps {
 export default function GalleryItem({ item, onClick, className = "" }: GalleryItemProps) {
   return (
     <div 
-      className={`gallery-item cursor-pointer group relative ${className}`}
-      onClick={() => onClick(item)}
+      className={`gallery-item group relative ${className}`}
       data-testid={`gallery-item-${item.id}`}
     >
       {/* Image Container */}
@@ -26,27 +25,41 @@ export default function GalleryItem({ item, onClick, className = "" }: GalleryIt
         <div className="absolute bottom-0 left-0 right-0 bg-black/90 text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"
              style={{ height: '60%', borderRadius: '30px' }}
              data-testid={`overlay-${item.id}`}>
-          <div className="h-full flex flex-col justify-start space-y-3">
-            {item.client && (
-              <div>
-                <p className="text-xs uppercase tracking-wide text-gray-300 mb-1">Client</p>
-                <p className="text-sm font-medium" data-testid={`client-${item.id}`}>{item.client}</p>
-              </div>
-            )}
-            
-            {item.deliveredIn && (
-              <div>
-                <p className="text-xs uppercase tracking-wide text-gray-300 mb-1">Delivered In</p>
-                <p className="text-sm font-medium" data-testid={`delivered-${item.id}`}>{item.deliveredIn}</p>
-              </div>
-            )}
-            
-            {item.review && (
-              <div>
-                <p className="text-xs uppercase tracking-wide text-gray-300 mb-1">Review</p>
-                <p className="text-sm italic leading-relaxed" data-testid={`review-${item.id}`}>"{item.review}"</p>
-              </div>
-            )}
+          <div className="h-full flex flex-col justify-start">
+            <div className="space-y-3 overflow-y-auto">
+              {item.client && (
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-gray-300 mb-1">Client</p>
+                  <p className="text-sm font-medium" data-testid={`client-${item.id}`}>{item.client}</p>
+                </div>
+              )}
+              
+              {item.deliveredIn && (
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-gray-300 mb-1">Delivered In</p>
+                  <p className="text-sm font-medium" data-testid={`delivered-${item.id}`}>{item.deliveredIn}</p>
+                </div>
+              )}
+              
+              {item.review && (
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-gray-300 mb-1">Review</p>
+                  <p className="text-sm italic leading-relaxed" data-testid={`review-${item.id}`}>"{item.review}"</p>
+                </div>
+              )}
+            </div>
+            <div className="mt-auto pt-4">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onClick(item);
+                }}
+                className="bg-white text-black pill-md font-medium hover:bg-white/90 transition-colors w-full"
+                data-testid={`see-more-${item.id}`}
+              >
+                See More
+              </button>
+            </div>
           </div>
         </div>
       </div>

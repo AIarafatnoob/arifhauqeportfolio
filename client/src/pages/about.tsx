@@ -11,7 +11,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
+              src="/assets/hero2.png" 
               alt="Arif Haque portrait" 
               className="w-full h-96 object-cover pill"
               data-testid="artist-portrait"

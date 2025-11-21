@@ -49,7 +49,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-6">
               <button 
-                onClick={() => document.getElementById('my-art')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-white text-black pill-lg font-medium hover:bg-white/90 transition-colors"
                 data-testid="view-work-button"
               >
@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* Featured Works Preview */}
-      <section className="py-20 px-6 bg-muted">
+      <section id="featured-projects" className="py-20 px-6 bg-muted">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif font-semibold text-center mb-16">
             Featured Projects
