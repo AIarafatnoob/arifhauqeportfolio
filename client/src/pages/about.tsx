@@ -1,3 +1,4 @@
+import aboutImage from "../../assets/hero2.png";
 export default function About() {
   return (
     <div className="min-h-screen py-20 px-6">
@@ -8,12 +9,12 @@ export default function About() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch mb-20">
           <div>
             <img 
-              src="/assets/hero2.png" 
+              src={aboutImage} 
               alt="Arif Haque portrait" 
-              className="w-full h-96 object-cover pill"
+              className="w-full h-full object-cover pill"
               data-testid="artist-portrait"
             />
           </div>

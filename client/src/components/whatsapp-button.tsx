@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 // TODO: Replace with the actual phone number provided by the user.
-const WHATSAPP_NUMBER = "1234567890"; // Replace with a real number including country code
+const WHATSAPP_NUMBER = "+8801712773855"; // Replace with a real number including country code
 
 export default function WhatsAppButton() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
